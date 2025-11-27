@@ -28,18 +28,18 @@ The Aire HPC cluster is composed of various types of compute nodes, each designe
 - 256GB DDR5-4800 Memory
 - **84 GPU cards** total
 
-## Purchasing Additional Aire Nodes
+## Purchasing additional Aire nodes
 
 If your project requires additional resources, you can purchase nodes for priority access within the Aire HPC system. Please review the guidelines below and contact Research IT for more details.
 
-### Guidelines for Node Purchases
+### Guidelines for node purchases
 
 - **Quote Details:** The quoted price will cover only the cost of the hardware. Management and maintenance of the system are provided centrally and are not included in the hardware quote.
 - **Data Centre Capacity:** The number of nodes that can be added depends on available space in the data centre. Please consult with Research IT to confirm the current capacity.
 - **Node Lifespan:** All purchased nodes are managed as part of Aire’s infrastructure and will remain available until the system’s retirement date of 31/07/2029, regardless of purchase timing.
 - **Access Model:** Purchasing a node grants priority access to its resources, not exclusive ownership. This policy maximises resource utilisation and promotes energy efficiency. For specific arrangements, please discuss with Research IT.
 
-### Estimated Node Costs
+### Estimated node costs
 
 | Node Name                 | Cores per Node | Memory per Node | Processor                | Estimated Cost |
 | ------------------------- | -------------- | --------------- | ------------------------ | -------------- |
