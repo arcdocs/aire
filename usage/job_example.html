@@ -475,7 +475,8 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-ml-jobs-on-gpu">AI/ML jobs on GPU</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-memory-jobs">Large-memory jobs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-arrays">Task arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-arrays">Job arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-arrays-multiple-tasks-in-one-job">Task arrays (multiple tasks in one job)</a></li>
 </ul>
             </nav>
         </div>
@@ -495,7 +496,7 @@
 <li><p>1GB memory</p></li>
 <li><p>Execution on the standard compute node pool</p></li>
 </ul>
-<p>Users must always specify a time limit, either at submission or in their job script.</p>
+<p>Users must always specify a time limit, either at submission or in their job script. The <a class="reference external" href="https://slurm.schedmd.com/documentation.html">official Slurm documentation</a> is maintained by SchedMD, the developers of Slurm, and so provides a good starting point for anyone who wants to explore the topic in more depth.</p>
 <p>In the following examples, we demonstrate job scripts for running jobs on various configurations of resources.</p>
 <section id="serial-jobs">
 <h2>Serial jobs<a class="headerlink" href="#serial-jobs" title="Link to this heading">#</a></h2>
@@ -665,9 +666,9 @@ cp -r $TMP_SHARED/results /path/to/permanent/storage/
 </pre></div>
 </div>
 </section>
-<section id="task-arrays">
-<h2>Task arrays<a class="headerlink" href="#task-arrays" title="Link to this heading">#</a></h2>
-<p>Array jobs let you run a set of serial jobs with a single submission. Slurm runs multiple instances of the job simultaneously, and each job can use different parameters or data. The example script below runs 100 instances in a Conda environment, with input and output files determined by the array index <code class="docutils literal notranslate"><span class="pre">$SLURM_ARRAY_TASK_ID</span></code>. Task arrays are also compatible with other software, making them flexible for a variety of workflows.</p>
+<section id="job-arrays">
+<h2>Job arrays<a class="headerlink" href="#job-arrays" title="Link to this heading">#</a></h2>
+<p>Job arrays let you run a set of independent jobs with a single submission. Slurm creates multiple instances of the job, and each instance can use different parameters or data. The example script below runs 100 jobs in a Conda environment, with input and output files determined by the array index <code class="docutils literal notranslate"><span class="pre">$SLURM_ARRAY_TASK_ID</span></code>. Job arrays are compatible with many workflows, making them a flexible option for parameter sweeps or batch processing.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --job-name=task_array_job</span>
 <span class="c1">#SBATCH --time=01:00:00</span>
@@ -681,7 +682,26 @@ module<span class="w"> </span>load<span class="w"> </span>miniforge
 conda<span class="w"> </span>activate<span class="w"> </span>my_environment
 
 <span class="c1"># Run the job, passing in the input and output filenames</span>
-python<span class="w"> </span>–i<span class="w"> </span><span class="nv">$SCRATCH</span>/input/input.<span class="nv">$SLURM_ARRAY_TASK_ID</span><span class="w"> </span>–o<span class="w"> </span><span class="nv">$SCRATCH</span>/results/out.<span class="nv">$SLURM_ARRAY_TASK_ID</span>
+python<span class="w"> </span>-i<span class="w"> </span><span class="nv">$SCRATCH</span>/input/input.<span class="nv">$SLURM_ARRAY_TASK_ID</span><span class="w"> </span>-o<span class="w"> </span><span class="nv">$SCRATCH</span>/results/out.<span class="nv">$SLURM_ARRAY_TASK_ID</span>
+</pre></div>
+</div>
+</section>
+<section id="task-arrays-multiple-tasks-in-one-job">
+<h2>Task arrays (multiple tasks in one job)<a class="headerlink" href="#task-arrays-multiple-tasks-in-one-job" title="Link to this heading">#</a></h2>
+<p>Unlike job arrays, which submit many independent jobs, a task array refers to running multiple tasks within a single Slurm job allocation. This is common for MPI jobs or parallel programs where tasks need to communicate.</p>
+<p>Slurm uses the <code class="docutils literal notranslate"><span class="pre">--ntasks</span></code> option to specify the number of tasks. All tasks share the same environment and resources, making this ideal for tightly coupled workloads.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=task_example</span>
+<span class="c1">#SBATCH --output=task_%j.out</span>
+<span class="c1">#SBATCH --error=task_%j.err</span>
+<span class="c1">#SBATCH --ntasks=10 # 10 tasks in one job</span>
+<span class="c1">#SBATCH --cpus-per-task=1</span>
+<span class="c1">#SBATCH --time=01:00:00</span>
+<span class="c1">#SBATCH --mem=20G</span>
+
+module<span class="w"> </span>load<span class="w"> </span>openmpi
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running MPI job with </span><span class="nv">$SLURM_NTASKS</span><span class="s2"> tasks&quot;</span>
+srun<span class="w"> </span>./my_mpi_program
 </pre></div>
 </div>
 </section>
@@ -760,7 +780,8 @@ python<span class="w"> </span>–i<span class="w"> </span><span class="nv">$SCRA
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ai-ml-jobs-on-gpu">AI/ML jobs on GPU</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-memory-jobs">Large-memory jobs</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-arrays">Task arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-arrays">Job arrays</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-arrays-multiple-tasks-in-one-job">Task arrays (multiple tasks in one job)</a></li>
 </ul>
   </nav></div>
 
