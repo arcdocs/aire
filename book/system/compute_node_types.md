@@ -4,7 +4,7 @@ The Aire HPC cluster is composed of various types of compute nodes, each designe
 
 ## Standard compute node
 
-- 52 systems
+- 52 nodes
 - Dell R6625 servers
 - AMD Dual 84 core 2.2GHz (9634 Genoa-X)
 - Dual 480GB M2 drives
@@ -12,7 +12,7 @@ The Aire HPC cluster is composed of various types of compute nodes, each designe
 
 ## High-memory node
 
-- 2 systems
+- 2 nodes
 - Dell R6625 servers
 - AMD Dual 84 core 2.2GHz (9634 Genoa-X)
 - Dual 480GB M2 drives
@@ -20,7 +20,7 @@ The Aire HPC cluster is composed of various types of compute nodes, each designe
 
 ## GPU node
 
-- 28 systems
+- 28 nodes
 - Dell R7615 servers
 - 3 x NVIDIA L40S 48GB GPUs (PCIe)
 - AMD 24 core 2.9GHz (9254 Genoa-X)
