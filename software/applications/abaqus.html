@@ -547,7 +547,8 @@
 <h2>How to submit a job<a class="headerlink" href="#how-to-submit-a-job" title="Link to this heading">#</a></h2>
 <p>Abaqus is available on Aire for both interactive and batch processing. Users can submit jobs via the command line or through job submission scripts for larger simulations.</p>
 <p>To use Abaqus, you need to set up the license environment variable:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nb">export</span><span class="w"> </span><span class="nv">LM_LICENSE_FILE</span><span class="o">=</span>port@host:<span class="nv">$LM_LICENSE_FILE</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">LM_LICENSE_FILE</span><span class="o">=</span>port@host
+<span class="nb">export</span><span class="w"> </span><span class="nv">ABAQUSLM_LICENSE_FILE</span><span class="o">=</span><span class="nv">$LM_LICENSE_FILE</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -565,7 +566,9 @@
 <span class="c1">#SBATCH --ntasks=8</span>
 
 module<span class="w"> </span>load<span class="w"> </span>abaqus/2022
-<span class="nb">export</span><span class="w"> </span><span class="nv">ABAQUSLM_LICENSE_FILE</span><span class="o">=</span>port@host
+<span class="nb">export</span><span class="w"> </span><span class="nv">LM_LICENSE_FILE</span><span class="o">=</span>port@host
+<span class="nb">export</span><span class="w"> </span><span class="nv">ABAQUSLM_LICENSE_FILE</span><span class="o">=</span><span class="nv">$LM_LICENSE_FILE</span>
+
 abaqus<span class="w"> </span><span class="nv">job</span><span class="o">=</span>abaqus_job<span class="w"> </span><span class="nv">input</span><span class="o">=</span>my_simulation.inp<span class="w"> </span><span class="nv">mp_mode</span><span class="o">=</span>threads<span class="w"> </span><span class="nv">cpus</span><span class="o">=</span><span class="nv">$SLURM_NTASKS</span><span class="w"> </span><span class="nv">scratch</span><span class="o">=</span>/mnt/scratch/&lt;username&gt;<span class="w"> </span>interactive
 </pre></div>
 </div>
