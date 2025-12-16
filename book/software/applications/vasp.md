@@ -45,7 +45,7 @@ Only the group leader (or an assigned primary contact) may download VASP or mana
 ### Further information
 
 For licensing queries, contact VASP Software GmbH at
-`licensing@vasp.at`
+[licensing@vasp.at](mailto:licensing@vasp.at)
 
 
 ## Scratch space
