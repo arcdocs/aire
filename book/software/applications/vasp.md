@@ -32,7 +32,7 @@ Responsibility for managing authorised VASP users rests with the research group 
 
 ### User declaration
 
-Use of VASP on Aire is conditional on the user’s declaration, please contact IT specifying the following statement:
+Use of VASP on Aire is conditional on the user’s declaration. Please contact IT with the following statement:
 
 > *I confirm that I am an authorised user under a valid VASP group licence and will comply with the VASP Software GmbH licensing and citation conditions.*
 
