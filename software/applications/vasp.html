@@ -468,7 +468,12 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-versions-on-aire">Available versions on Aire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licensing">Licensing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licensing">Licensing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-declaration">User declaration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-access">Download and access</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-information">Further information</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scratch-space">Scratch space</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-submit-a-job">How to submit a job</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-job-vasp-6-x-intel-mpi-build">Example job (VASP 6.x – Intel MPI build)</a></li>
@@ -518,18 +523,29 @@ Users should validate their results before publication.</p>
 <hr class="docutils" />
 <section id="licensing">
 <h2>Licensing<a class="headerlink" href="#licensing" title="Link to this heading">#</a></h2>
-<p>Each user must supply their own valid <strong><code class="docutils literal notranslate"><span class="pre">vasp.license</span></code></strong> file obtained from the <a class="reference external" href="https://www.vasp.at/">VASP portal</a>.</p>
-<p>VASP automatically looks for this file in your home directory:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$HOME/vasp.license
-</pre></div>
-</div>
-<p>If you store it elsewhere, set:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">VASP_LICENSE_FILE</span><span class="o">=</span>/path/to/vasp.license
-</pre></div>
-</div>
-<p>The licence file must be readable by your job environment.</p>
+<p>VASP is licensed per research group and is not licensed on a personal, departmental, or institution-wide basis.</p>
+<p>Licenses are issued only to well-defined research groups. All authorised users must belong to the same organisational unit (e.g. Department or Institute) and be based at the same physical location.</p>
+<p>VASP licenses are not transferable between research institutions. Any transfer of a license to another group within the same institution requires explicit approval from VASP Software GmbH.</p>
+<p>Only users officially registered under a valid VASP group license may use VASP. Users who leave a licensed group must stop using VASP immediately, unless they move to another group holding a valid VASP license.</p>
+<p>Responsibility for managing authorised VASP users rests with the research group and its designated license contact. ARC provides VASP as a managed application but does not verify, track, or audit individual licensing eligibility.</p>
+<section id="user-declaration">
+<h3>User declaration<a class="headerlink" href="#user-declaration" title="Link to this heading">#</a></h3>
+<p>Use of VASP on Aire is conditional on the user’s declaration. Please contact IT with the following statement:</p>
+<blockquote>
+<div><p><em>I confirm that I am an authorised user under a valid VASP group licence and will comply with the VASP Software GmbH licensing and citation conditions.</em></p>
+</div></blockquote>
 </section>
-<hr class="docutils" />
+<section id="download-and-access">
+<h3>Download and access<a class="headerlink" href="#download-and-access" title="Link to this heading">#</a></h3>
+<p>Access to the VASP download portal is managed by VASP Software GmbH.</p>
+<p>Only the group leader (or an assigned primary contact) may download VASP or manage license membership. Standard users may use VASP but cannot download the software or manage users.</p>
+</section>
+<section id="further-information">
+<h3>Further information<a class="headerlink" href="#further-information" title="Link to this heading">#</a></h3>
+<p>For licensing queries, contact VASP Software GmbH at
+<a class="reference external" href="mailto:licensing&#37;&#52;&#48;vasp&#46;at">licensing<span>&#64;</span>vasp<span>&#46;</span>at</a></p>
+</section>
+</section>
 <section id="scratch-space">
 <h2>Scratch space<a class="headerlink" href="#scratch-space" title="Link to this heading">#</a></h2>
 <p>VASP produces large temporary and output files such as <code class="docutils literal notranslate"><span class="pre">WAVECAR</span></code>, <code class="docutils literal notranslate"><span class="pre">CHGCAR</span></code>, <code class="docutils literal notranslate"><span class="pre">PROCAR</span></code>, and <code class="docutils literal notranslate"><span class="pre">vasprun.xml</span></code>.
@@ -693,7 +709,12 @@ srun<span class="w"> </span>--mpi<span class="o">=</span>pmix<span class="w"> </
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-versions-on-aire">Available versions on Aire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licensing">Licensing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#licensing">Licensing</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#user-declaration">User declaration</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#download-and-access">Download and access</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#further-information">Further information</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scratch-space">Scratch space</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-submit-a-job">How to submit a job</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-job-vasp-6-x-intel-mpi-build">Example job (VASP 6.x – Intel MPI build)</a></li>
