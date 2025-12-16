@@ -20,23 +20,33 @@ Users should validate their results before publication.
 
 ## Licensing
 
-Each user must supply their own valid **`vasp.license`** file obtained from the [VASP portal](https://www.vasp.at/).
+VASP is licensed per research group and is not licensed on a personal, departmental, or institution-wide basis.
 
-VASP automatically looks for this file in your home directory:
+Licenses are issued only to well-defined research groups. All authorised users must belong to the same organisational unit (e.g. Department or Institute) and be based at the same physical location.
 
-```
-$HOME/vasp.license
-```
+VASP licenses are not transferable between research institutions. Any transfer of a license to another group within the same institution requires explicit approval from VASP Software GmbH.
 
-If you store it elsewhere, set:
+Only users officially registered under a valid VASP group license may use VASP. Users who leave a licensed group must stop using VASP immediately, unless they move to another group holding a valid VASP license.
 
-```bash
-export VASP_LICENSE_FILE=/path/to/vasp.license
-```
+Responsibility for managing authorised VASP users rests with the research group and its designated license contact. ARC provides VASP as a managed application but does not verify, track, or audit individual licensing eligibility.
 
-The licence file must be readable by your job environment.
+### User declaration
 
----
+Use of VASP on Aire is conditional on the user’s declaration, please contact IT specifying the following statement:
+
+> *I confirm that I am an authorised user under a valid VASP group licence and will comply with the VASP Software GmbH licensing and citation conditions.*
+
+### Download and access
+
+Access to the VASP download portal is managed by VASP Software GmbH.
+
+Only the group leader (or an assigned primary contact) may download VASP or manage license membership. Standard users may use VASP but cannot download the software or manage users.
+
+### Further information
+
+For licensing queries, contact VASP Software GmbH at
+`licensing@vasp.at`
+
 
 ## Scratch space
 
