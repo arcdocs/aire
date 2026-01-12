@@ -56,6 +56,7 @@ chapters:
   #   - file: software/applications/gromacs
     - file: software/applications/gaussian
     - file: software/applications/matlab
+    - file: software/applications/namd
     - file: software/applications/openfoam
     - file: software/applications/orca
     - file: software/applications/rosetta
