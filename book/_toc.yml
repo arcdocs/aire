@@ -53,6 +53,7 @@ chapters:
       - file: software/applications/ansys/ls-dyna
     - file: software/applications/castep
     - file: software/applications/comsol
+    - file: software/applications/fleur
   #   - file: software/applications/gromacs
     - file: software/applications/gaussian
     - file: software/applications/matlab
