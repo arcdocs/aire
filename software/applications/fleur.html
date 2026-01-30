@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>CASTEP &#8212; Aire Documentation</title>
+    <title>Fleur &#8212; Aire Documentation</title>
   
   
   
@@ -60,13 +60,13 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'software/applications/castep';</script>
-    <link rel="canonical" href="https://arcdocs.leeds.ac.uk/aire/software/applications/castep.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'software/applications/fleur';</script>
+    <link rel="canonical" href="https://arcdocs.leeds.ac.uk/aire/software/applications/fleur.html" />
     <link rel="icon" href="../../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="COMSOL" href="comsol.html" />
-    <link rel="prev" title="LS-DYNA" href="ansys/ls-dyna.html" />
+    <link rel="next" title="Gaussian" href="gaussian.html" />
+    <link rel="prev" title="COMSOL" href="comsol.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -213,9 +213,9 @@
 <li class="toctree-l4"><a class="reference internal" href="ansys/ls-dyna.html">LS-DYNA</a></li>
 </ul>
 </details></li>
-<li class="toctree-l3 current active"><a class="current reference internal" href="#">CASTEP</a></li>
+<li class="toctree-l3"><a class="reference internal" href="castep.html">CASTEP</a></li>
 <li class="toctree-l3"><a class="reference internal" href="comsol.html">COMSOL</a></li>
-<li class="toctree-l3"><a class="reference internal" href="fleur.html">Fleur</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">Fleur</a></li>
 <li class="toctree-l3"><a class="reference internal" href="gaussian.html">Gaussian</a></li>
 <li class="toctree-l3"><a class="reference internal" href="matlab.html">MATLAB</a></li>
 <li class="toctree-l3"><a class="reference internal" href="openfoam.html">OpenFOAM</a></li>
@@ -335,7 +335,7 @@
       
       
       
-      <li><a href="https://github.com/arcdocs/aire/edit/main/book/software/applications/castep.md" target="_blank"
+      <li><a href="https://github.com/arcdocs/aire/edit/main/book/software/applications/fleur.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -352,7 +352,7 @@
       
       
       
-      <li><a href="https://github.com/arcdocs/aire/issues/new?title=Issue%20on%20page%20%2Fsoftware/applications/castep.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/arcdocs/aire/issues/new?title=Issue%20on%20page%20%2Fsoftware/applications/fleur.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -382,7 +382,7 @@
       
       
       
-      <li><a href="../../_sources/software/applications/castep.md" target="_blank"
+      <li><a href="../../_sources/software/applications/fleur.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -458,7 +458,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>CASTEP</h1>
+    <h1>Fleur</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -469,11 +469,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-versions-on-aire">Available versions on Aire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-submit-a-job">How to submit a job</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serial-jobs">Serial jobs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-jobs">Parallel jobs</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run-a-job">How to run a job</a></li>
 </ul>
             </nav>
         </div>
@@ -485,12 +481,11 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="castep">
-<h1>CASTEP<a class="headerlink" href="#castep" title="Link to this heading">#</a></h1>
-<p>CASTEP is popular software package for calculating electronic properties of matter using density functional theory (DFT) methods. For usage instructions and tutorials, please see the <a class="reference external" href="https://castep-docs.github.io/castep-docs/">official documentation</a>.</p>
+  <section id="fleur">
+<h1>Fleur<a class="headerlink" href="#fleur" title="Link to this heading">#</a></h1>
+<p>Fleur is a tool for calculating material properties with density functional theory (DFT) and related methods. It is released under the MIT licence. For further information, including tutorials, please see the <a class="reference external" href="https://www.flapw.de/MaX-8.0/">official documentation</a></p>
 <section id="available-versions-on-aire">
 <h2>Available versions on Aire<a class="headerlink" href="#available-versions-on-aire" title="Link to this heading">#</a></h2>
-<p>CASTEP 25.12 is available on Aire. There are two builds, depending on whether the user requires serial or parallel (threaded and MPI) execution:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Version</p></th>
@@ -498,67 +493,52 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>serial</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">castep/25.12/gcc-13.2.0_cuda-12.6.2_fftw-3.3.10_openblas-0.3.28</span></code></p></td>
+<tr class="row-even"><td><p>MaX8.0 (no HDF5 support)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">fleur/max8/openmpi-5.0.5-gcc-14.2.0_lapack-3.12.0</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p>parallel</p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">castep/25.12/gcc-13.2.0_cuda-12.6.2_fftw-3.3.10_openmpi-5.0.6_openblas-0.3.28</span></code></p></td>
+<tr class="row-odd"><td><p>MaX8.0 (with HDF5 support)</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">module</span> <span class="pre">load</span> <span class="pre">fleur/max8_hdf5/openmpi-5.0.5-gcc-14.2.0_lapack-3.12.0</span></code></p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<p>Note that there are two versions available on Aire; with and without support for HDF5. For more intensive calculations, it is likely that the HDF5 version will be faster, with the opposite true for simpler runs.</p>
 </section>
-<section id="how-to-submit-a-job">
-<h2>How to submit a job<a class="headerlink" href="#how-to-submit-a-job" title="Link to this heading">#</a></h2>
-<section id="serial-jobs">
-<h3>Serial jobs<a class="headerlink" href="#serial-jobs" title="Link to this heading">#</a></h3>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#SBATCH --job-name=castep_serial_job</span>
-<span class="c1">#SBATCH --time=01:00:00</span>
-<span class="c1">#SBATCH --mem=1G</span>
-<span class="c1">#SBATCH --nodes=1</span>
-<span class="c1">#SBATCH --ntasks=1</span>
-<span class="c1">#SBATCH --cpus-per-task=1</span>
-
-module<span class="w"> </span>load<span class="w"> </span>castep/25.12/gcc-13.2.0_cuda-12.6.2_fftw-3.3.10_openblas-0.3.28
-
-<span class="c1"># Run the job</span>
-castep.serial<span class="w"> </span>input_files
+<section id="how-to-run-a-job">
+<h2>How to run a job<a class="headerlink" href="#how-to-run-a-job" title="Link to this heading">#</a></h2>
+<p>A fleur job generally runs in two steps. First, an .xml-format input file is generated from a human readable text file, using the input generator. This can be performed on a login node, as it is not computationally intensive. Please see the <a class="reference external" href="https://www.flapw.de/MaX-8.0/future/F1/">tutorial</a> for further information.</p>
+<div class="highlight-plaintext notranslate"><div class="highlight"><pre><span></span>[user@login1[aire] my_folder]$ module load fleur
+Loading fleur/max8_hdf5/openmpi-5.0.5-gcc-14.2.0_lapack-3.12.0
+  Loading requirement: gcc/14.2.0 lapack/3.12.0 openmpi/5.0.5/gcc-14.2.0
+[user@login1[aire] my_folder]$ inpgen -f my_input.txt
+      Welcome to FLEUR - inpgen   (www.flapw.de)
+      MaX-Release 8.0          (www.max-centre.eu)
+...
+ Run finished successfully
+ Stop message:
+   All done
+...
+[user@login1[aire] my_folder]$
 </pre></div>
 </div>
-</section>
-<section id="parallel-jobs">
-<h3>Parallel jobs<a class="headerlink" href="#parallel-jobs" title="Link to this heading">#</a></h3>
-<p>Requesting 8 cores on a single node:</p>
+<p>Fleur supports distributed-memory parallelism with OpenMPI. To run a Fleur job, call Fleur from the same directory as the generated input file. Below is an example job submission script.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#SBATCH --job-name=castep_threaded_job</span>
-<span class="c1">#SBATCH --time=01:00:00</span>
-<span class="c1">#SBATCH --mem=16G</span>
-<span class="c1">#SBATCH --nodes=1</span>
-<span class="c1">#SBATCH --ntasks-per-node=8</span>
+<span class="c1">#SBATCH --job-name=fleur_example</span>
+<span class="c1">#SBATCH --time=00:20:00         # Request running time</span>
+<span class="c1">#SBATCH --mem=10G               # Request memory</span>
+<span class="c1">#SBATCH --nodes=2               # Number of nodes</span>
+<span class="c1">#SBATCH --ntasks-per-node=3     # Number of tasks per node</span>
+<span class="c1">#SBATCH --cpus-per-task=1       # Number of CPUs per task</span>
 
-module<span class="w"> </span>purge
-module<span class="w"> </span>load<span class="w"> </span>castep/25.12/gcc-13.2.0_cuda-12.6.2_fftw-3.3.10_openmpi-5.0.6_openblas-0.3.28
+<span class="c1"># Load Fleur module and dependencies</span>
+module<span class="w"> </span>load<span class="w"> </span>fleur/max8_hdf5
 
-<span class="c1"># Run the job</span>
-mpirun<span class="w"> </span>castep.mpi<span class="w"> </span>input_files
+
+
+<span class="c1"># Run the job using MPIrun, passing in number of tasks</span>
+mpirun<span class="w"> </span>-n<span class="w"> </span><span class="nv">$SLURM_NTASKS_PER_NODE</span><span class="w"> </span>fleur_MPI
 </pre></div>
 </div>
-<p>Requesting all cores and memory across two nodes:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
-<span class="c1">#SBATCH --job-name=castep_mpi_job</span>
-<span class="c1">#SBATCH --time=01:00:00</span>
-<span class="c1">#SBATCH --nodes=2</span>
-<span class="c1">#SBATCH --ntasks-per-node=168</span>
-
-module<span class="w"> </span>purge
-module<span class="w"> </span>load<span class="w"> </span>castep/25.12/gcc-13.2.0_cuda-12.6.2_fftw-3.3.10_openmpi-5.0.6_openblas-0.3.28
-
-<span class="c1"># Run the job</span>
-mpirun<span class="w"> </span>castep.mpi<span class="w"> </span>input_files
-</pre></div>
-</div>
-</section>
 </section>
 </section>
 
@@ -593,20 +573,20 @@ mpirun<span class="w"> </span>castep.mpi<span class="w"> </span>input_files
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="ansys/ls-dyna.html"
+       href="comsol.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">LS-DYNA</p>
+        <p class="prev-next-title">COMSOL</p>
       </div>
     </a>
     <a class="right-next"
-       href="comsol.html"
+       href="gaussian.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">COMSOL</p>
+        <p class="prev-next-title">Gaussian</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -628,11 +608,7 @@ mpirun<span class="w"> </span>castep.mpi<span class="w"> </span>input_files
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#available-versions-on-aire">Available versions on Aire</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-submit-a-job">How to submit a job</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#serial-jobs">Serial jobs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#parallel-jobs">Parallel jobs</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#how-to-run-a-job">How to run a job</a></li>
 </ul>
   </nav></div>
 
