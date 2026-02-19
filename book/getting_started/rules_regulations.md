@@ -38,8 +38,7 @@ You must use the appropriate tools and protocols provided on the system and ensu
 
 ## Sensitive and Personal Data
 
-- Personal or sensitive data must not be stored on the system.
-- The HPC service is not intended for processing sensitive or personal data.
+- Personal or sensitive data must not be stored or processed on the system.
 - In general, data that has been de-identified (for example, where names have been removed such that individuals cannot be identified) may be used on the system.
 
 Additional guidance about data is available at:
