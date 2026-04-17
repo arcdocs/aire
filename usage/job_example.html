@@ -34,7 +34,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -173,7 +173,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../getting_started/start.html">Getting Started</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/request_account.html">Requesting an account</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../getting_started/logging_on.html">Logging-on</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../getting_started/logging_on.html">Logging on</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/request_software.html">Requesting new software</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/rules_regulations.html">Rules &amp; Regulations</a></li>
 </ul>
@@ -479,6 +479,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-memory-jobs">Large-memory jobs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-arrays">Job arrays</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-arrays-multiple-tasks-in-one-job">Task arrays (multiple tasks in one job)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-dependencies">Job dependencies</a></li>
 </ul>
             </nav>
         </div>
@@ -707,6 +708,33 @@ srun<span class="w"> </span>./my_mpi_program
 </pre></div>
 </div>
 </section>
+<section id="job-dependencies">
+<h2>Job dependencies<a class="headerlink" href="#job-dependencies" title="Link to this heading">#</a></h2>
+<p>It is possible to submit a job which will only start once another job has reached a particular state. This is useful when multiple stages of a workflow must run in sequence. Dependency conditions include <code class="docutils literal notranslate"><span class="pre">afterok</span></code>, which starts the dependent job only if the initial job completes successfully, and <code class="docutils literal notranslate"><span class="pre">afterany</span></code>, which starts the dependent job once the initial job finishes, regardless of outcome (including failure or timeout).</p>
+<p>Submitting an initial job using <code class="docutils literal notranslate"><span class="pre">sbatch</span> <span class="pre">job1.sh</span></code> returns a job ID number <code class="docutils literal notranslate"><span class="pre">&lt;JOBID&gt;</span></code>. A second job submitted with a dependency, <code class="docutils literal notranslate"><span class="pre">job2.sh</span></code>, will remain in the queue until the dependency condition is satisfied.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[username@login1[aire] ~]$ sbatch --dependency=afterok:&lt;JOBID&gt; job2.sh
+</pre></div>
+</div>
+<p>A dependency on more than one job can be specified by separating job IDs with a colon. The dependent job will start only when all specified jobs satisfy the condition.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[username@login1[aire] ~]$ sbatch --dependency=afterok:&lt;JOBID_1&gt;:&lt;JOBID_2&gt; job3.sh
+</pre></div>
+</div>
+<p>A dependent job can also be submitted from within a job script. In this case, <code class="docutils literal notranslate"><span class="pre">$SLURM_JOB_ID</span></code> is set automatically to the job ID of the running job.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#SBATCH --job-name=initial_job</span>
+<span class="c1">#SBATCH --time=01:00:00</span>
+<span class="c1">#SBATCH --mem=1G</span>
+<span class="c1">#SBATCH --ntasks=1</span>
+<span class="c1">#SBATCH --cpus-per-task=1</span>
+
+<span class="c1"># Run the job</span>
+./example.bin
+
+<span class="c1"># Submit a dependent job</span>
+sbatch<span class="w"> </span>--dependency<span class="o">=</span>afterany:<span class="nv">$SLURM_JOB_ID</span><span class="w"> </span>job2.sh
+</pre></div>
+</div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -784,6 +812,7 @@ srun<span class="w"> </span>./my_mpi_program
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#large-memory-jobs">Large-memory jobs</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-arrays">Job arrays</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#task-arrays-multiple-tasks-in-one-job">Task arrays (multiple tasks in one job)</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#job-dependencies">Job dependencies</a></li>
 </ul>
   </nav></div>
 
