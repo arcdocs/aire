@@ -29,7 +29,7 @@ Note that the above articles require you to log in with your University account 
 :::{note}
  Globus is now our preference for transferring files between OneDrive and Aire, whereas, in the past, users have been advised to use `rclone`. We'd also encourage you to use Isilon `/resstore` more than OneDrive or N:\ drive for research data files.
  Visit the Library's <a href="https://library.leeds.ac.uk/info/14062/research-data-management/65/storing-and-handling-data/3">Storing and handling data</a> section for more information about different storage services.
- Refer to [KB0017543](https://it.leeds.ac.uk/it?id=kb_article_view&sys_kb_id=a15bba21fb943a909eaffefbaeefdcb5&table=kb_knowledge&searchTerm=Globus) for help with data transfer between University storage systems and Globus connection points.
+ Refer to [KB0017543](https://it.leeds.ac.uk/it?id=kb_article_view&sys_kb_id=a15bba21fb943a909eaffefbaeefdcb5&table=kb_knowledge&searchTerm=KB0017543) for help with data transfer between University storage systems and Globus connection points.
 :::
 
 Globus enables you to quickly, securely and reliably move your data (in particular, large files) to and from locations you have access to, using GridFTP protocol optimized for high-bandwidth wide-area networks. We are currently working to add Globus centrally to Aire.
