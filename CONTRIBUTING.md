@@ -22,6 +22,6 @@ If you have any questions that aren't discussed below, please let us know throug
 ## Get in touch
 
 You can get in touch with the Research Computing Team at Leeds via the following channels:
+
 - Open an [issue](https://github.com/ARCTraining/template-jb-docs/issues)
 - Email the Research Computing Team via [ask-rc@leeds.ac.uk](mailto:ask-rc@leeds.ac.uk)
-
