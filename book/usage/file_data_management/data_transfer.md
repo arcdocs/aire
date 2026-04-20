@@ -104,7 +104,7 @@ The following guidance has been adapted from the [Globus documentation (Linux in
    You can add `$SCRATCH` with the same permissions by adding the following line to the file and saving:
 
    ```bash
-   $SCRATCH,0,1
+   $/mnt/scratch/$USER,0,1
    ```
 
    Read more about [Managing Globus Connect Personal Directory Permissions via the Config File in the official documentation](https://docs.globus.org/globus-connect-personal/install/linux/#config-paths).
@@ -115,6 +115,8 @@ The following guidance has been adapted from the [Globus documentation (Linux in
 2. From Aire, run Globus with `nohup`:
 
    ```bash
+   # replace `x.y.z` in the line below with the version number you see
+   $ cd globusconnectpersonal-x.y.z
    $ ./globusconnectpersonal -start &
    ```
 
