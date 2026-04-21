@@ -553,7 +553,7 @@ Refer to <a href="https://it.leeds.ac.uk/it?id=kb_article_view&sys_kb_id=a15bba2
 <li><p>Extract the tarball:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>tar<span class="w"> </span>xzf<span class="w"> </span>globusconnectpersonal-latest.tgz
 <span class="c1"># this will produce a versioned globusconnectpersonal directory</span>
-<span class="c1"># replace `x.y.z` in the line below with the version number you see</span>
+<span class="c1"># replace `x.y.z` in the line below with the version number you see, or use tab complete</span>
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>globusconnectpersonal-x.y.z
 </pre></div>
 </div>
@@ -562,7 +562,7 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>globu
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./globusconnectpersonal<span class="w"> </span>-setup<span class="w"> </span>--no-gui
 </pre></div>
 </div>
-<p>This will launch Globus, and your terminal should provide you with a URL to visit on your local machine to complete set-up (including University of Leeds SSO); you will then receive a key to copy and past back into the command line on Aire. Please see the <a class="reference external" href="https://docs.globus.org/globus-connect-personal/install/linux/#running_with_no_gui">Globus documentation</a> for further details.</p>
+<p>This will launch Globus, and your terminal should provide you with a URL to visit on your local machine to complete set-up (including University of Leeds SSO); you will then receive a key to copy and paste back into the command line on Aire. You will then need to set a name for this endpoint (e.g. <code class="docutils literal notranslate"><span class="pre">aire_endpoint</span></code> or something sensible). Please see the <a class="reference external" href="https://docs.globus.org/globus-connect-personal/install/linux/#running_with_no_gui">Globus documentation</a> for further details.</p>
 </li>
 <li><p>You can close Globus once set-up is complete.</p></li>
 <li><p>Modify or create the file <code class="docutils literal notranslate"><span class="pre">config-paths</span></code> (assuming you are still in the folder <code class="docutils literal notranslate"><span class="pre">globusconnectpersonal-x.y.z</span></code>) with your favourite text editor (this command will create the file if it doesn’t already exist):</p>
@@ -573,15 +573,16 @@ $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>globu
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&lt;path&gt;,&lt;sharing<span class="w"> </span>flag&gt;,&lt;R/W<span class="w"> </span>flag&gt;
 </pre></div>
 </div>
-<p>In your file, you’ll see:</p>
+<p>The nano command may create a new empty file, or you may already have this file, depending on the version of Globus. If there is already content in this file, you’ll see something like this:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>~/,0,1
 </pre></div>
 </div>
-<p>Which provides access to your home directory (<code class="docutils literal notranslate"><span class="pre">~/</span></code>), doesn’t allow sharing (<code class="docutils literal notranslate"><span class="pre">0</span></code> as the sharing flag), and and allows read/write access (<code class="docutils literal notranslate"><span class="pre">1</span></code> as the R/W flag).</p>
-<p>You can add <code class="docutils literal notranslate"><span class="pre">$SCRATCH</span></code> with the same permissions by adding the following line to the file and saving:</p>
+<p>Which provides access to your home directory (<code class="docutils literal notranslate"><span class="pre">~/</span></code>), doesn’t allow sharing (<code class="docutils literal notranslate"><span class="pre">0</span></code> is the sharing flag), and and allows read/write access (<code class="docutils literal notranslate"><span class="pre">1</span></code> is the R/W flag). Don’t worry if the file is empty; just add the above line and save in order to access your home directory (or <code class="docutils literal notranslate"><span class="pre">~/some_directory/,0,1</span></code> for a sub-directory).</p>
+<p>You can also add <code class="docutils literal notranslate"><span class="pre">$SCRATCH</span></code> with the same permissions by adding the following line to the file and saving:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$/mnt/scratch/<span class="nv">$USER</span>,0,1
 </pre></div>
 </div>
+<p>Or again, a sub-directory: <code class="docutils literal notranslate"><span class="pre">$/mnt/scratch/$USER/some_directory/,0,1</span></code>.</p>
 <p>Read more about <a class="reference external" href="https://docs.globus.org/globus-connect-personal/install/linux/#config-paths">Managing Globus Connect Personal Directory Permissions via the Config File in the official documentation</a>.</p>
 </li>
 </ol>
