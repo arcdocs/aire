@@ -79,7 +79,7 @@ The following guidance has been adapted from the [Globus documentation (Linux in
    $ ./globusconnectpersonal -setup --no-gui
    ```
 
-   This will launch Globus, and your terminal should provide you with a URL to visit on your local machine to complete set-up (including University of Leeds SSO); you will then receive a key to copy and past back into the command line on Aire. You will then need to set a name for this endpoint (e.g. Aire). Please see the [Globus documentation](https://docs.globus.org/globus-connect-personal/install/linux/#running_with_no_gui) for further details.
+   This will launch Globus, and your terminal should provide you with a URL to visit on your local machine to complete set-up (including University of Leeds SSO); you will then receive a key to copy and past back into the command line on Aire. You will then need to set a name for this endpoint (e.g. `aire_endpoint` or something sensible). Please see the [Globus documentation](https://docs.globus.org/globus-connect-personal/install/linux/#running_with_no_gui) for further details.
 4. You can close Globus once set-up is complete.
 5. Modify or create the file `config-paths` (assuming you are still in the folder `globusconnectpersonal-x.y.z`) with your favourite text editor (this command will create the file if it doesn't already exist):
 
@@ -93,7 +93,7 @@ The following guidance has been adapted from the [Globus documentation (Linux in
    <path>,<sharing flag>,<R/W flag>
    ```
 
-   The nano command may create a new empty file, or you may already have this file, depending on the verison of Globus. If there is already content in this file, you'll see something like this:
+   The nano command may create a new empty file, or you may already have this file, depending on the version of Globus. If there is already content in this file, you'll see something like this:
 
    ```bash
    ~/,0,1
@@ -101,7 +101,7 @@ The following guidance has been adapted from the [Globus documentation (Linux in
 
    Which provides access to your home directory (`~/`), doesn't allow sharing (`0` as the sharing flag), and and allows read/write access (`1` as the R/W flag). Don't worry if the file is empty; just add the above line and save in order to access your home directory (or `~/some_directory/,0,1` for a sub-directory).
 
-   You can add also `$SCRATCH` with the same permissions by adding the following line to the file and saving:
+   You can also add `$SCRATCH` with the same permissions by adding the following line to the file and saving:
 
    ```bash
    $/mnt/scratch/$USER,0,1
