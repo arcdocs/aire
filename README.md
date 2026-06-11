@@ -3,6 +3,7 @@
 This is the repository for the documentation for the University of Leeds Aire HPC system. It is managed by the University of Leeds [Research Computing Team.](https://arc.leeds.ac.uk/team/)
 
 ## Contributing to the documentation
+
 We welcome all contributions to this project via GitHub issues and pull requests. Please follow the guidelines on the [`CONTRIBUTING.md` file](CONTRIBUTING.md) to make sure your contributions can be easily integrated in the project. Edits must be approved by at least one user from the arcdocs group (generally RSEs & RIEs at Leeds). For larger issues that can't be solved quickly, or require greater input, please raise an Issue in the "Issues" tab. 
 
 There are two main ways to update the documentation; via GitHub codespaces (recommended) or locally on your own machine.
@@ -48,7 +49,3 @@ To preview the built html locally, you can open up a basic Python server:
 ```bash
 python -m http.server -d book/_build/html
 ```
-
-
-
-
