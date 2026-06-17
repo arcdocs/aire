@@ -27,7 +27,7 @@ Where we request personal data from you on our website you will be informed at t
 
 ## 5. Purpose of processing - automated collection of personal information
 
-When you access our web pages certain information your browser provides, including your IP address at the time, browser type, and potentially the address of the page you last visited, will be automatically recorded by the University [if externally hosted add details here of any collection carried out by the hosting provider]. This data may be used to aid detection in the event of a security breach. The legal basis for this processing is necessity to pursue our legitimate interests to keep our website secure. The University [if externally hosted add details here of any collection carried out by the hosting provider] retains this data in a form from which you may be identifiable for a period of up to one month.
+When you access our web pages certain information your browser provides, including your IP address at the time, browser type, and potentially the address of the page you last visited, will be automatically recorded by the University and GitHub. This data may be used to aid detection in the event of a security breach. The legal basis for this processing is necessity to pursue our legitimate interests to keep our website secure. The University and GitHub retains this data in a form from which you may be identifiable for a period of up to one month.
 
 ## 6. Third-party access
 
