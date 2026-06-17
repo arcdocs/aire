@@ -13,6 +13,8 @@ You can use `git` as you would locally, including pushing to the remote. You won
 You should automatically have an open terminal with the prompt `(arcdocs-aire-jb) root@codespaces-e8c8b0:/workspace#`.
 If not, open a new terminal with `Ctrl + Shift + '`; this terminal should already have the [`arcdocs-aire-jb` conda environment](../environment.yml) activated.
 
+Note: there may be a little delay before the environment begins to install.
+
 ### 1. Build the documentation
 
 ```bash
@@ -25,9 +27,17 @@ jupyter-book build book/
 python -m http.server -d book/_build/html
 ```
 
-Then visit the forwarded port 8000 in your browser. VSCode should prompt you to do this with a popup, providing a URL for you to visit (the rmeote-machine equivalent of [localhost:8000](http://localhost:8000/welcome.html)):
+Then visit the forwarded port 8000 in your browser. VSCode should prompt you to do this with a popup, providing a URL for you to visit (the remote-machine equivalent of [localhost:8000](http://localhost:8000/welcome.html)):
 
 ![alt text](open_in_browser.png)
+
+### 3. Make changes
+
+Ensure you create and swap to a new branch to store any changes, and test that your local build looks correct before opening a pull request:
+
+```bash
+git switch -c <new-branch-name>
+```
 
 ## Useful Commands
 
