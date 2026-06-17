@@ -36,7 +36,7 @@ Then visit the forwarded port 8000 in your browser. VSCode should prompt you to 
 Ensure you create and swap to a new branch to store any changes, and test that your local build looks correct before opening a pull request:
 
 ```bash
-git switch -c new-branch-name
+git switch -c <new-branch-name>
 ```
 
 ## Useful Commands
