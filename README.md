@@ -49,3 +49,11 @@ To preview the built html locally, you can open up a basic Python server:
 ```bash
 python -m http.server -d book/_build/html
 ```
+
+## Copyright and Licence
+
+© University of Leeds.
+
+Except where otherwise stated, the content of this repository is licensed under the Creative Commons Attribution 4.0 International Licence (CC BY 4.0).
+
+You are free to share and adapt this material for any purpose, provided appropriate attribution is given.
