@@ -105,6 +105,14 @@ module load openmpi
 mpirun ./example.bin
 ```
 
+:::{note}
+MPI applications can be launched using `mpirun`, `mpiexec` or `srun`, depending on the MPI implementation and the application's requirements.
+
+On Slurm-based systems such as Aire, some applications work better when launched with `srun`, or when configured to use `srun` for internally launched MPI processes. If you encounter issues such as MPI reporting insufficient available slots despite requesting the required resources from Slurm, consult the application's documentation to determine the recommended launcher.
+
+If you are unsure which launcher your application expects, consult the software documentation or contact Research IT.
+:::
+
 ## AI/ML jobs on GPU
 
 This example shows how to run a PyTorch job in a Conda environment on Aire, which uses Miniforge as the Conda installer. To request GPUs, make sure to specify the gpu partition in your Slurm script with `#SBATCH --partition=gpu`. Then, request the number of GPUs you need using `#SBATCH --gres=gpu:N`, where `N` is the number of GPUs; for instance, `#SBATCH --gres=gpu:1` for one GPU or `#SBATCH --gres=gpu:2` for two GPUs.
