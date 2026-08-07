@@ -1,6 +1,6 @@
 # Aire Documentation
 
-This is the repository for the documentation for the University of Leeds Aire HPC system. It is managed by the University of Leeds [Research Computing Team.](https://arc.leeds.ac.uk/profile_type/team/)
+This is the repository for the documentation for the University of Leeds Aire HPC system. It is managed by the University of Leeds [Research Computing Team.](https://arc.leeds.ac.uk/team/)
 
 ## Contributing to the documentation
 

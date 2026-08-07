@@ -53,9 +53,11 @@ chapters:
       - file: software/applications/ansys/ls-dyna
     - file: software/applications/castep
     - file: software/applications/comsol
+    - file: software/applications/fleur
   #   - file: software/applications/gromacs
     - file: software/applications/gaussian
     - file: software/applications/matlab
+    - file: software/applications/namd
     - file: software/applications/openfoam
     - file: software/applications/orca
     - file: software/applications/rosetta
@@ -100,3 +102,4 @@ chapters:
   title: Contact Us
 - url: https://arc.leeds.ac.uk
   title: Research Computing Website
+- file: privacy_and_cookies
