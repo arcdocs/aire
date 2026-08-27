@@ -12,5 +12,5 @@ If any, please provide any further useful info.
 
 ## Checklist
 
-- [ ] I've included all the commits I intended to in this PR 
-- [ ] I've built and tested this branch and there were no new warnings or errors 
+- [ ] I've included all the commits I intended to in this PR
+- [ ] I've built and tested this branch and there were no new warnings or errors
