@@ -59,6 +59,12 @@ You can submit more jobs than can run at once, up to the submission limit. Jobs 
 
 ## Accounts and partitions
 
-Users who have more than one Slurm account must specify which account to use for each job. Your normal account can be used with the regular partitions, while a teaching account must be used with `teachingnodes`.
+Users who have more than one Slurm account must specify which account to use for each job. Your normal account can be used with the regular partitions, while a teaching account must be used with `teachingnodes`. You can verify all Slurm accounts associated with your user using:
 
+```bash
+sacctmgr show user withassoc format=account where name=$USER
+```
+
+```{note}
 For help with the cohort account, access permissions, or teaching job limits, contact the lecturer or teaching coordinator responsible for the class.
+```
