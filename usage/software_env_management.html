@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Dependency Management &#8212; Aire Documentation</title>
+    <title>Managing Software Environments &#8212; Aire Documentation</title>
   
   
   
@@ -60,12 +60,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'usage/dependency_management';</script>
-    <link rel="canonical" href="https://arcdocs.leeds.ac.uk/aire/usage/dependency_management.html" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'usage/software_env_management';</script>
+    <link rel="canonical" href="https://arcdocs.leeds.ac.uk/aire/usage/software_env_management.html" />
     <link rel="icon" href="../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Software on Aire" href="../software/start.html" />
+    <link rel="next" title="Teaching on Aire" href="teaching.html" />
     <link rel="prev" title="Data Sharing" href="file_data_management/data_sharing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -199,7 +199,8 @@
 <li class="toctree-l3"><a class="reference internal" href="file_data_management/data_sharing.html">Data Sharing</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Dependency Management</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Managing Software Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="teaching.html">Teaching on Aire</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../software/start.html">Software on Aire</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -246,6 +247,7 @@
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../software/interpreters/start.html">Interpreters</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3"><a class="reference internal" href="../software/interpreters/miniforge.html">Miniforge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../software/interpreters/r.html">R</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../software/tools/start.html">Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -338,7 +340,7 @@
       
       
       
-      <li><a href="https://github.com/arcdocs/aire/edit/main/book/usage/dependency_management.md" target="_blank"
+      <li><a href="https://github.com/arcdocs/aire/edit/main/book/usage/software_env_management.md" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -355,7 +357,7 @@
       
       
       
-      <li><a href="https://github.com/arcdocs/aire/issues/new?title=Issue%20on%20page%20%2Fusage/dependency_management.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/arcdocs/aire/issues/new?title=Issue%20on%20page%20%2Fusage/software_env_management.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -385,7 +387,7 @@
       
       
       
-      <li><a href="../_sources/usage/dependency_management.md" target="_blank"
+      <li><a href="../_sources/usage/software_env_management.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -461,7 +463,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Dependency Management</h1>
+    <h1>Managing Software Environments</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -498,14 +500,14 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="dependency-management">
-<span id="id1"></span><h1>Dependency Management<a class="headerlink" href="#dependency-management" title="Link to this heading">#</a></h1>
+  <section id="managing-software-environments">
+<h1>Managing Software Environments<a class="headerlink" href="#managing-software-environments" title="Link to this heading">#</a></h1>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Research IT has determined that, due to licensing restrictions, Anaconda must no longer be used. Miniforge is the recommended alternative for Python environments on Aire.</p>
 <p>This guidance specifically discusses Conda dependency management, which can be used for a range of languages/projects, including Python, R, C/C++, and Rust amongst others.</p>
 <p>This does not cover alternative package management and virtual environment solutions like <code class="docutils literal notranslate"><span class="pre">renv</span></code>, <code class="docutils literal notranslate"><span class="pre">pixi</span></code>, or <code class="docutils literal notranslate"><span class="pre">uv</span> <span class="pre">pip</span></code>.</p>
-<p>For instructions on submitting a job using Miniforge, please see the <a class="reference external" href="https://arcdocs.leeds.ac.uk/aire/software/interpreters/miniforge.html">Miniforge documentation</a></p>
+<p>For instructions on submitting a job using Miniforge, please see the <a class="reference internal" href="../software/interpreters/miniforge.html"><span class="std std-doc">Miniforge section</span></a>.</p>
 </div>
 <p>Good dependency management makes your research computing:</p>
 <ul class="simple">
@@ -562,11 +564,11 @@ A conda <code class="docutils literal notranslate"><span class="pre">env.yaml</s
 <p>When using conda to install R packages, add r- before the R package name. For instance, to install rbokeh, use <code class="docutils literal notranslate"><span class="pre">r-rbokeh</span></code>. To install rJava, use conda <code class="docutils literal notranslate"><span class="pre">r-rjava</span></code>.</p>
 </div>
 <p>If you are creating an R environment, your  file might look like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">:</span> <span class="n">my</span><span class="o">-</span><span class="n">env</span><span class="o">-</span><span class="n">name</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">my-env-name</span>
 
-<span class="n">dependencies</span><span class="p">:</span>
-  <span class="o">-</span> <span class="n">r</span><span class="o">-</span><span class="n">base</span>
-  <span class="o">-</span> <span class="n">r</span><span class="o">-</span><span class="n">tidyverse</span>
+<span class="nt">dependencies</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">r-base</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">r-tidyverse</span>
 </pre></div>
 </div>
 <p>Please follow all the other general instructions; creating an R environment is otherwise identical.</p>
@@ -710,11 +712,11 @@ But remember: it is better to keep your <code class="docutils literal notranslat
       </div>
     </a>
     <a class="right-next"
-       href="../software/start.html"
+       href="teaching.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Software on Aire</p>
+        <p class="prev-next-title">Teaching on Aire</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

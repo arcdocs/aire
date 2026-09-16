@@ -65,7 +65,7 @@
     <link rel="icon" href="../../_static/favicon-32x32.png"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Tools" href="../tools/start.html" />
+    <link rel="next" title="R" href="r.html" />
     <link rel="prev" title="Interpreters" href="start.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -199,7 +199,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../../usage/file_data_management/data_sharing.html">Data Sharing</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2"><a class="reference internal" href="../../usage/dependency_management.html">Dependency Management</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage/software_env_management.html">Managing Software Environments</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../usage/teaching.html">Teaching on Aire</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../start.html">Software on Aire</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -246,6 +247,7 @@
 </details></li>
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="start.html">Interpreters</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 current active"><a class="current reference internal" href="#">Miniforge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="r.html">R</a></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../tools/start.html">Tools</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -487,14 +489,12 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <!--remember to link to dependency management bit here -->
-<section id="miniforge">
+  <section id="miniforge">
 <h1>Miniforge<a class="headerlink" href="#miniforge" title="Link to this heading">#</a></h1>
-<!-- Brief introduction -->
-<p>Miniforge contains minimal versions of the conda and mamba environment and package managers, with specificity to conda-forge. It allows users to create and manage virtual environments with packages from the conda-forge repository. Documentation for the conda-forge project is available <a class="reference external" href="https://conda-forge.org/docs/">here</a> and a reference for the conda package manager is <a class="reference external" href="https://docs.conda.io/en/latest/index.html">here.</a></p>
+<p>Miniforge contains minimal versions of the conda and mamba environment and package managers, with specificity to conda-forge. It allows users to create and manage virtual environments with packages from the conda-forge repository. Documentation for the conda-forge project is available <a class="reference external" href="https://conda-forge.org/docs/">here</a> and a reference for the conda package manager is <a class="reference external" href="https://docs.conda.io/en/latest/index.html">here</a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Please see the creating environments section of the <a class="reference internal" href="../../usage/dependency_management.html#dependency-management"><span class="std std-ref">dependency management</span></a> article for further instructions and advice on how to create conda environments using Miniforge, including Python and R enviroments</p>
+<p>Please see the creating environments section of the <a class="reference internal" href="../../usage/software_env_management.html"><span class="std std-doc">Managing Software Environments</span></a> article for further instructions and advice on how to create conda environments using Miniforge, including Python and R enviroments</p>
 </div>
 <section id="available-versions-on-aire">
 <h2>Available versions on Aire<a class="headerlink" href="#available-versions-on-aire" title="Link to this heading">#</a></h2>
@@ -515,16 +515,14 @@
 </section>
 <section id="creating-a-new-environment">
 <h2>Creating a new environment<a class="headerlink" href="#creating-a-new-environment" title="Link to this heading">#</a></h2>
-<!-- Instructions on how to create a new environment using Miniforge -->
 <p>To create an environment from a pre-defined <code class="docutils literal notranslate"><span class="pre">.yml</span></code> file, use the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
 </pre></div>
 </div>
-<p>Please see the <a class="reference internal" href="../../usage/dependency_management.html#creating-environment"><span class="std std-ref">creating environments</span></a> section of the dependency management article for further instructions and advice on how to create conda environments using miniforge.</p>
+<p>Please see the <a class="reference internal" href="../../usage/software_env_management.html#creating-environment"><span class="std std-ref">Create a new environment</span></a> section in the Managing Software Environments section for further instructions and advice on how to create conda environments using miniforge.</p>
 </section>
 <section id="activating-an-environment">
 <h2>Activating an environment<a class="headerlink" href="#activating-an-environment" title="Link to this heading">#</a></h2>
-<!-- Instructions on how to activate an environment -->
 <p>To activate an environment (<code class="docutils literal notranslate"><span class="pre">myenv</span></code>, in this example), use the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>activate<span class="w"> </span>myenv
 </pre></div>
@@ -532,7 +530,6 @@
 </section>
 <section id="deactivating-an-environment">
 <h2>Deactivating an environment<a class="headerlink" href="#deactivating-an-environment" title="Link to this heading">#</a></h2>
-<!-- Instructions on how to deactivate an environment -->
 <p>To deactivate an environment, use the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>conda<span class="w"> </span>deactivate<span class="w"> </span>myenv
 </pre></div>
@@ -540,7 +537,6 @@
 </section>
 <section id="submitting-a-job-with-miniforge">
 <h2>Submitting a job with Miniforge<a class="headerlink" href="#submitting-a-job-with-miniforge" title="Link to this heading">#</a></h2>
-<!-- Instructions on how to submit a job using a Miniforge managed conda environment -->
 <p>The below job script requests 8 CPU cores for a Python script run within the conda environment <code class="docutils literal notranslate"><span class="pre">myenv</span></code>.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="c1">#SBATCH --job-name=miniforge_job</span>
@@ -601,11 +597,11 @@ python<span class="w"> </span>my_script.py
       </div>
     </a>
     <a class="right-next"
-       href="../tools/start.html"
+       href="r.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Tools</p>
+        <p class="prev-next-title">R</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
