@@ -20,7 +20,7 @@ You can specify the account and partition in the job script:
 #SBATCH --mem=1G
 #SBATCH --output=teaching_job.out
 #SBATCH --partition=teachingnodes
-#SBATCH --account=teaching_account
+#SBATCH --account=teaching_account    # Remember to replace the teaching account ID!
 
 echo "Job started at: $(date)"
 echo "Running on node: $(hostname)"
