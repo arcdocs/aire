@@ -7,7 +7,7 @@ This guidance specifically discusses Conda dependency management, which can be u
 
 This does not cover alternative package management and virtual environment solutions like `renv`, `pixi`, or `uv pip`.
 
-For instructions on submitting a job using Miniforge, please see the [Miniforge section](/book/software/interpreters/miniforge.md)
+For instructions on submitting a job using Miniforge, please see the [Miniforge section](../software/interpreters/miniforge.md).
 ```
 
 Good dependency management makes your research computing:
