@@ -1,6 +1,6 @@
 # Teaching on Aire
 
-Aire provides dedicated teaching partitions for practical classes, demonstrations, and other teaching activities. Teaching jobs use a cohort-specific Slurm account and the `teachingnodes` partition.
+Aire provides dedicated teaching partition for practical classes, demonstrations, and other teaching activities. Teaching jobs use a cohort-specific Slurm account and the `teachingnodes` partition.
 
 Teaching accounts are created for each cohort. Your lecturer or teaching coordinator will provide the account code and arrange access for teaching staff and students. Replace `teaching_account` in the examples below with the account code provided for your cohort.
 
