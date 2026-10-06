@@ -507,19 +507,19 @@
 <span class="c1">#SBATCH --partition=teachingnodes</span>
 <span class="c1">#SBATCH --account=teaching_account    # Remember to replace the teaching account ID!</span>
 
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Job started at: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running on node: </span><span class="k">$(</span>hostname<span class="k">)</span><span class="s2">&quot;</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Current directory: </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&quot;</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Number of CPUs: </span><span class="nv">$SLURM_CPUS_PER_TASK</span><span class="s2">&quot;</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Account: </span><span class="nv">$SLURM_JOB_ACCOUNT</span><span class="s2">&quot;</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Partition: </span><span class="nv">$SLURM_JOB_PARTITION</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Job started at: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Running on node: </span><span class="k">$(</span>hostname<span class="k">)</span><span class="s2">"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Current directory: </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Number of CPUs: </span><span class="nv">$SLURM_CPUS_PER_TASK</span><span class="s2">"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Account: </span><span class="nv">$SLURM_JOB_ACCOUNT</span><span class="s2">"</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Partition: </span><span class="nv">$SLURM_JOB_PARTITION</span><span class="s2">"</span>
 
 <span class="c1"># Run your teaching workload here</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running a simple test...&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Running a simple test..."</span>
 sleep<span class="w"> </span><span class="m">10</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Test complete!&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Test complete!"</span>
 
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Job finished at: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Job finished at: </span><span class="k">$(</span>date<span class="k">)</span><span class="s2">"</span>
 </pre></div>
 </div>
 <p>Save the script, for example as <code class="docutils literal notranslate"><span class="pre">teaching_job.sh</span></code>, and submit it with:</p>

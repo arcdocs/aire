@@ -665,7 +665,7 @@ python<span class="w"> </span>my_ML_script.py
 #SBATCH --mem-per-cpu=8G           # Request 8GB memory per CPU core
 
 # Flash storage path is automatically set as $TMP_SHARED
-echo &quot;Flash storage path: $TMP_SHARED&quot;
+echo "Flash storage path: $TMP_SHARED"
 
 # Copy input data to Flash storage
 cp -r /path/to/input/data $TMP_SHARED/
@@ -739,7 +739,7 @@ python<span class="w"> </span>-i<span class="w"> </span><span class="nv">$SCRATC
 <span class="c1">#SBATCH --mem=20G</span>
 
 module<span class="w"> </span>load<span class="w"> </span>openmpi
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running MPI job with </span><span class="nv">$SLURM_NTASKS</span><span class="s2"> tasks&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Running MPI job with </span><span class="nv">$SLURM_NTASKS</span><span class="s2"> tasks"</span>
 srun<span class="w"> </span>./my_mpi_program
 </pre></div>
 </div>

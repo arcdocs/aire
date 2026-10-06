@@ -533,11 +533,11 @@
 module<span class="w"> </span>purge
 module<span class="w"> </span>load<span class="w"> </span>rosetta/20250822
 
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Running job&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"Running job"</span>
 
-<span class="nv">COMMAND</span><span class="o">=</span><span class="s2">&quot;rosetta relax @min.script&quot;</span>
+<span class="nv">COMMAND</span><span class="o">=</span><span class="s2">"rosetta relax @min.script"</span>
 
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;executing command: </span><span class="nv">$COMMAND</span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"executing command: </span><span class="nv">$COMMAND</span><span class="s2">"</span>
 
 <span class="nb">eval</span><span class="w"> </span><span class="nv">$COMMAND</span>
 
@@ -606,7 +606,7 @@ module<span class="w"> </span>load<span class="w"> </span>rosetta/20250822
 <span class="nv">state</span><span class="o">=</span><span class="k">$(</span><span class="nb">echo</span><span class="w"> </span><span class="m">0000</span><span class="nv">$SGE_TASK_ID</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>rev<span class="w"> </span><span class="p">|</span><span class="w"> </span>cut<span class="w"> </span>-c<span class="w"> </span><span class="m">1</span>-5<span class="w"> </span><span class="p">|</span><span class="w"> </span>rev<span class="k">)</span>
 
 
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"</span>
 <span class="s2">## it should just find the database</span>
 <span class="s2">##-database /apps/applications/rosetta/3.10/1/default/main/database</span>
 <span class="s2">-out:suffix _</span><span class="si">${</span><span class="nv">SLURM_JOB_NAME</span><span class="si">}</span><span class="s2">_</span><span class="si">${</span><span class="nv">SLURM_JOB_ID</span><span class="si">}</span>
@@ -624,7 +624,7 @@ module<span class="w"> </span>load<span class="w"> </span>rosetta/20250822
 <span class="s2">-flip_HNQ</span>
 <span class="s2">-no_optH false</span>
 <span class="s2">-flip_HNQ</span>
-<span class="s2">-score:weights ref2015 &quot;</span><span class="w"> </span>&gt;<span class="w"> </span>flag_<span class="si">${</span><span class="nv">SLURM_JOB_NAME</span><span class="si">}</span>_<span class="si">${</span><span class="nv">SLURM_JOB_ID</span><span class="si">}</span>.file
+<span class="s2">-score:weights ref2015 "</span><span class="w"> </span>&gt;<span class="w"> </span>flag_<span class="si">${</span><span class="nv">SLURM_JOB_NAME</span><span class="si">}</span>_<span class="si">${</span><span class="nv">SLURM_JOB_ID</span><span class="si">}</span>.file
 rosetta<span class="w"> </span>relax.default.linuxgccrelease<span class="w"> </span>-in:file:s<span class="w"> </span>scLTIIb-cp-topology-sculpt-relax.pdb<span class="w"> </span>@flag_<span class="si">${</span><span class="nv">SLURM_JOB_NAME</span><span class="si">}</span>_<span class="si">${</span><span class="nv">SLURM_JOB_ID</span><span class="si">}</span>.file
 </pre></div>
 </div>
