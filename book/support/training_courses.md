@@ -9,5 +9,3 @@ We offer regular training courses at the University, as well as access to course
 For additional learning, we recommend the following external training resources:
 
 [Software Carpentry - The Unix Shell](https://swcarpentry.github.io/shell-novice/)
-
-<!-- TODO: Add more external training links -->
